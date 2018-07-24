@@ -1,0 +1,325 @@
+<HTML>
+ <head>
+  <title> Into woods </title>
+ <style>
+     #North {margin-left:60px}
+     #West {margin-left:30px}
+     #East {margin-left:10px}
+     #South {margin-left:58px}
+ </style>
+</head>
+<body>
+<img id=pic width=200 height=200>
+<div id=MyPosition>You are at a crossroad</div>
+<p>
+<button id="North" onclick="N()">North</button>
+<br>
+<button id="West" onclick="W()">West</button>
+<button id="East" onclick="E()">East</button>
+<br>
+<button id="South" onclick="S()">South</button>
+</p>
+<br><p>
+<button onclick="R()">Restart</button>
+</p>
+ <script>
+ var spot;
+ spot=1
+ document.getElementById("pic").src="Crossroad.jpg"
+ function N() {
+     if (spot==1) MyPosition.innerHTML = "You are at a junction", setInterval(spot=2,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+        document.getElementById("pic").src="NotEast.jpg" ;
+     else if (spot==2) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=3,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==3) MyPosition.innerHTML = "You are at a junction", setInterval(spot=4,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+        document.getElementById("pic").src="NotWest.jpg";
+     else if (spot==4) MyPosition.innerHTML = "You are at a road", setInterval(spot=5,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Road.jpg";
+     else if (spot==5) MyPosition.innerHTML = "You are at another road", setInterval(spot=6,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Road.jpg";
+     else if (spot==6) MyPosition.innerHTML = "You are at a wall so must go back", setInterval(spot=7,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Wall.jpg";
+     else if (spot==7) MyPosition.innerHTML = "You walked into a wall and have concussion", setInterval(spot=36,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Wall.jpg"; //stop
+     else if (spot==9) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=10,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendSW.jpg";
+     else if (spot==11) MyPosition.innerHTML = "You are at a yet another bend", setInterval(spot=12,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendES.jpg";
+     else if (spot==13) MyPosition.innerHTML = "You are at a well", setInterval(spot=14,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Well.jpg";
+     else if (spot==17) MyPosition.innerHTML = "You are back the crossroad", setInterval(spot=1,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Crossroad.jpg";
+     else if (spot==19) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=18,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendES.jpg";
+     else if (spot==20) MyPosition.innerHTML = "You are at a road", setInterval(spot=19,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Road.jpg";
+     else if (spot==23) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=28,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendSW.jpg";
+     else if (spot==24) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=25,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==25) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=26,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendSW.jpg";
+     else if (spot==27) MyPosition.innerHTML = "You are at a junction", setInterval(spot=9,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotEast.jpg";
+     else if (spot==31) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=34,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendES.jpg";
+     }
+ function E() {
+     if (spot==1) MyPosition.innerHTML = "You are at a road", setInterval(spot=8,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Zip.jpg";
+     else if (spot==4) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=15,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==8) MyPosition.innerHTML = "You are at a junction", setInterval(spot=9,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotEast.jpg";
+     else if (spot==11) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=10,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendSW.jpg";
+     else if (spot==12) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=13,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendWN.jpg";
+     else if (spot==14) MyPosition.innerHTML = "You have fallen down the well", setInterval(spot=16,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Well.jpg";                                                             //stop
+     else if (spot==15) MyPosition.innerHTML = "You are at a well", setInterval(spot=14,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Well.jpg";
+     else if (spot==18) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=17,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendWN.jpg";
+     else if (spot==20) MyPosition.innerHTML = "You made it home", setInterval(spot=21,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Homejpg.jpg";                                                           //stop
+     else if (spot==22) MyPosition.innerHTML = "You are at a junction", setInterval(spot=23,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotSouth.jpg";
+     else if (spot==23) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=24,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendWN.jpg";
+     else if (spot==27) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=26,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendSW.jpg";
+     else if (spot==29) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=28,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendSW.jpg";
+     else if (spot==31) MyPosition.innerHTML = "You are back at the crossroad", setInterval(spot=1,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Crossroad.jpg";
+     else if (spot==32) MyPosition.innerHTML = "You are at a junction", setInterval(spot=31,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotSouth.jpg";
+     else if (spot==33) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=32,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==34) MyPosition.innerHTML = "You are at a junction", setInterval(spot=2,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotEast.jpg";
+    }
+ function S() {
+     if (spot==1) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=17,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendWN.jpg";
+     else if (spot==2) MyPosition.innerHTML = "You are back at the crossroad", setInterval(spot=1,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Crossroad.jpg";
+     else if (spot==3) MyPosition.innerHTML = "You are at a junction", setInterval(spot=2,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotEast.jpg";
+     else if (spot==4) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=3,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==5) MyPosition.innerHTML = "You are at a junction", setInterval(spot=4,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="NotWest.jpg";
+     else if (spot==6) MyPosition.innerHTML = "You are back at the road", setInterval(spot=5,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Road.jpg";
+     else if (spot==7) MyPosition.innerHTML = "You are at a road", setInterval(spot=6,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Road.jpg";
+     else if (spot==9) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=27,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendNE.jpg";
+     else if (spot==10) MyPosition.innerHTML = "You are at a junction", setInterval(spot=9,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotEast.jpg";
+     else if (spot==12) MyPosition.innerHTML = "You are at yet another bend in the road", setInterval(spot=11,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendNE.jpg";
+     else if (spot==14) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=13,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendWN.jpg";
+     else if (spot==18) MyPosition.innerHTML = "You are at a road", setInterval(spot=19,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Road.jpg";
+     else if (spot==19) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=20,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendNE.jpg";
+     else if (spot==25) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=24,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="BendWN.jpg";
+     else if (spot==26) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=25,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==28) MyPosition.innerHTML = "You are at a junction", setInterval(spot=23,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotSouth.jpg";
+     else if (spot==34) MyPosition.innerHTML = "You are at a junction", setInterval(spot=31,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotSouth.jpg";
+    }
+function W() {
+     if (spot==1) MyPosition.innerHTML = "You are at a junction", setInterval(spot=31,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotSouth.jpg";
+     else if (spot==2) MyPosition.innerHTML = "You are at a bend in the road", setInterval(spot=34,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendES.jpg";
+     else if (spot==8) MyPosition.innerHTML = "You are back at the crossroad", setInterval(spot=1,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Crossroad.jpg";
+     else if (spot==9) MyPosition.innerHTML = "You are at a road", setInterval(spot=8,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Road.jpg";
+     else if (spot==10) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=11,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendNE.jpg";
+     else if (spot==13) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=12,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendES.jpg";
+     else if (spot==14) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=15,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==15) MyPosition.innerHTML = "You are at a junction", setInterval(spot=4,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="NotWest.jpg";
+     else if (spot==17) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=18,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendES.jpg";
+     else if (spot==22) MyPosition.innerHTML = "You made it home", setInterval(spot=21,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Homejpg.jpg";                                                           //stop
+     else if (spot==23) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=22,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==24) MyPosition.innerHTML = "You are at a junction", setInterval(spot=23,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="NotSouth.jpg";
+     else if (spot==26) MyPosition.innerHTML = "You are at another bend in the road", setInterval(spot=27,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="BendNE.jpg";
+     else if (spot==28) MyPosition.innerHTML = "You are at a road", setInterval(spot=29,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Zip.jpg";
+     else if (spot==29) MyPosition.innerHTML = "You fell down a hole", setInterval(spot=30,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
+         document.getElementById("pic").src="Dark.jpg";                                                           //stop
+     else if (spot==31) MyPosition.innerHTML = "You are at a bridge", setInterval(spot=32,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Bridge.jpg";
+     else if (spot==32) MyPosition.innerHTML = "You are at the side of a lake", setInterval(spot=33,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Lake.jpg";
+     else if (spot==33) MyPosition.innerHTML = "You entered the lake and got all soggy", setInterval(spot=35,500),
+     document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey"
+         document.getElementById("pic").src="Lake.jpg";                                                           //stop
+    }
+function R(){
+     MyPosition.innerHTML = "You are at the crossroad", setInterval(spot=1,500),
+     document.getElementById("North").style.color = "black", document.getElementById("East").style.color = "black",
+     document.getElementById("South").style.color = "black", document.getElementById("West").style.color = "black",
+         document.getElementById("pic").src="Crossroad.jpg";
+    }
+</script>
+</body>
+</html> 
