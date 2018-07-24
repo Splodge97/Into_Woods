@@ -2,10 +2,11 @@
  <head>
   <title> Into woods </title>
  <style>
-     #North {margin-left:60px}
-     #West {margin-left:30px}
-     #East {margin-left:10px}
-     #South {margin-left:58px}
+     #North {margin-left:100px; font-size:30px}
+     #West {margin-left:50px; font-size:30px}
+     #East {margin-left:10px; font-size:30px}
+     #South {margin-left:95px; font-size:30px}
+     #MyPosition {font-size:30px}
  </style>
 </head>
 <body>
@@ -311,7 +312,7 @@ function W() {
          document.getElementById("pic").src="Lake.jpg";
      else if (spot==33) MyPosition.innerHTML = "You entered the lake and got all soggy", setInterval(spot=35,500),
      document.getElementById("North").style.color = "grey", document.getElementById("East").style.color = "grey",
-     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey"
+     document.getElementById("South").style.color = "grey", document.getElementById("West").style.color = "grey",
          document.getElementById("pic").src="Lake.jpg";                                                           //stop
     }
 function R(){
